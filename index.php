@@ -65,15 +65,13 @@
                         <a class="page-scroll" href="#contact">Contact Us</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="http://localhost/eve-or/regist.php">Sign Up</a>
+                        <a class="page-scroll" href="http://localhost:8080/eve-or/regist.php">Sign Up</a>
                     </li>
-
                     <li>
-						<a class="page-scroll" href="http://localhost/eve-or/login.php">Sign In</a>
+						<a class="page-scroll" href="http://localhost:8080/eve-or/login.php">Sign In</a>
                     </li>
 
                 </ul>
-
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -109,10 +107,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
+    <section id= "contact" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact Us</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
                 <p><a href="mailto:eveor_id@gmail.com">eveor_id@gmail.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
@@ -155,7 +154,3 @@
 </body>
 
 </html>
-
-<?php
-//header("location: login.php");
-?>

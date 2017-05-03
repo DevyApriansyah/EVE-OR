@@ -8,10 +8,10 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:300,200' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
-
+  
       <link rel="stylesheet" href="css/style.css">
 
-
+  
 </head>
 
 <body>
@@ -25,11 +25,15 @@
   <div class="forceColor"></div>
   <div class="topbar">
     <div class="spanColor"></div>
-    <input type="text" class="input" id="username" placeholder="Full Name"/>
-    <input type="email" class="input" id="email" placeholder="Email"/>
-    <input type="password" class="input" id="password" placeholder="Password"/>
+    <input type="text" class="input" id="username" placeholder="Fullname" maxlength="16" required/>
+    <input type="email" class="input" id="email" placeholder="Email" required/>
+    <input type="password" class="input" id="password" placeholder="Password" required/>
+	<select type="select" class="input" placeholder="abc">
+		<option value="company" class="spanColor"> Company </option>  
+		<option value="committee" class="spanColor"> Committee </option>
+	</select>
+  <button class="submit" id="submit" >Sign Up</button>
   </div>
-  <button class="submit" id="submit" >Sign Up</button> <br>
 </div>
 
 </body>

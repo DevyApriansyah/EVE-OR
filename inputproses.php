@@ -3,9 +3,9 @@
 
 	$email = $_POST['email'];
 	$password = md5($_POST['password']);
-	$nama = $_POST['nama'];
+	$name = $_POST['name'];
 
-	$sql_buat = "INSERT INTO panitia(id_panitia, email, nama, password) VALUE('','$email', '$nama', '$password')";
+	$sql_buat = "INSERT INTO committee(committee_id, email, name, password) VALUE('','$email', '$name', '$password')";
 
 	if (mysqli_query($conn, $sql_buat)){
 ?>

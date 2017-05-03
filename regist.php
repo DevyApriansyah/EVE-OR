@@ -6,6 +6,7 @@
     header('Location: index.php');
   }
 ?>
+
 <html>
 <head>
   <meta charset="UTF-8">
@@ -33,12 +34,15 @@
   <div class="topbar">
     <div class="spanColor"></div>
     <form name="create" action="inputproses.php" method="POST">
-      <input type="text" class="input" name="nama" placeholder="Username"/>
-      <input type="email" class="input" name="email" placeholder="Email"/>
-      <input type="password" class="input" name="password" placeholder="Password"/>
+    <input type="text" class="input" name="name" placeholder="Username" maxlength="16" required/>
+    <input type="email" class="input" name="email" placeholder="Email" required/>
+    <input type="password" class="input" name="password" placeholder="Password" required/>
+	<select type="select" class="input" placeholder="abc">
+		<option value="company" class="spanColor"> Company </option>
+		<option value="committee" class="spanColor"> Committee </option>
+	</select>
+  <button class="submit" id="submit" >Sign Up</button>
   </div>
-  <button class="submit" id="submit" >Sign Up</button> <br>
-  </form>
 </div>
 
 </body>

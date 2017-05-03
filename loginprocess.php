@@ -1,13 +1,13 @@
 <?php
 	include "connect.php";
 
-	$username = $_POST['nama'];
+	$username = $_POST['name'];
 	$password = md5($_POST['password']);
-	$query = mysqli_query($conn, "SELECT * FROM panitia WHERE nama ='$username' and password = '$password'");
+	$query = mysqli_query($conn, "SELECT * FROM committee WHERE name ='$username' and password = '$password'");
   	$result = mysqli_fetch_array($query);
 
 	if ($result) {
-		$_SESSION['id'] = $result['id_panitia'];
+		$_SESSION['id'] = $result['committee_id'];
 		$_SESSION['status'] = "User";
 ?>
 		<script language="javascript">alert("Login Successful");</script>
