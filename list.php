@@ -32,8 +32,6 @@
 			<td>'.$count++.'</td>
 			<td>'.$result['name'].'</td>
 			<td>'.$result['email'].'</td>
-      <td><a href="edit.php?id='.$result['id_mahasiswa'].'"><button type="button" class="btn btn-primary">Edit</button></td>
-			<td><a href="deleteproses.php?id='.$result['id_mahasiswa'].'" button type="button" class="btn btn-danger">Delete</button></td>
 			</tr>';
 	}
 ?>

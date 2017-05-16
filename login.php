@@ -1,8 +1,7 @@
 <?php
-  @session_start();
-  include "connect.php";
-  ?>
-
+	@session_start();
+	include "connect.php";
+	?>
   <!DOCTYPE html>
   <html>
   <head>

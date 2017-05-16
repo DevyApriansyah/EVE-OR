@@ -62,10 +62,13 @@
                         <a class="page-scroll" href="#About">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact Us</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="http://localhost:8080/eve-or/regist.php">Sign Up</a>
+						<div class="dropdown">
+							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Up
+							<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="http://localhost:8080/eve-or/regist.php">Committee</a></li>
+								<li><a href="http://localhost:8080/eve-or/registspo.php">Company</a></li>
+							</ul>
                     </li>
                     <li>
 						<a class="page-scroll" href="http://localhost:8080/eve-or/login.php">Sign In</a>
