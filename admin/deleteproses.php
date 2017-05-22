@@ -1,5 +1,5 @@
 <?php
-  include "connect.php";
+  include "../connect.php";
   $user = $_GET['id'];
 
   $sql_hapus= "DELETE FROM user WHERE user_id= '$user'";

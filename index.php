@@ -1,8 +1,20 @@
 <?php
   @session_start();
   include "connect.php";
-
-?>
+  if (@$_SESSION['committee']){
+    ?>
+    <script>document.location.href='tampilan_awal_acara/awal.php';</script>
+    <?php
+  } else if (@$_SESSION['company']){
+      ?>
+      <script>document.location.href='tampilan_awal_sponsor/awalspo.php';</script>
+      <?php
+    }else if (@$_SESSION['admin']){
+        ?>
+        <script>document.location.href='admin/list.php';</script>
+        <?php
+      }else{
+  ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,20 +74,31 @@
                         <a class="page-scroll" href="#About">About</a>
                     </li>
                     <li>
-						<div class="dropdown">
-							<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sign Up
-							<span class="caret"></span></button>
-							<ul class="dropdown-menu">
-								<li><a href="http://localhost:8080/eve-or/regist.php">Committee</a></li>
-								<li><a href="http://localhost:8080/eve-or/registspo.php">Company</a></li>
-							</ul>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
                     </li>
+                        <!--<a class="page-scroll" href="http://localhost:8080/eve-or/regist.php">Sign Up</a>-->
+                    
+                    <li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign Up
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<style>
+							nav ul li:hover a> a, nav ul ul li:hover > a  {
+							color :white;
+							background-image:-webkit-linear-gradient(top, #333,#666);
+							background-color:#333;
+							}
+						</style>
+					<li><a href="http://localhost:8080/eve-or/regist.php">Committee</a></li>
+					<li><a href="http://localhost:8080/eve-or/registspo.php">Company</a></li>
+					</ul>
+					</li>
+                    
                     <li>
 						<a class="page-scroll" href="http://localhost:8080/eve-or/login.php">Sign In</a>
                     </li>
 
                 </ul>
-            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -157,3 +180,6 @@
 </body>
 
 </html>
+<?php
+}
+ ?>

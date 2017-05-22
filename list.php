@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
 	include "connect.php";
-	$query = mysqli_query($conn, "SELECT * FROM committee");
+	$query = mysqli_query($conn, "SELECT * FROM user");
 ?>
 <html lang="en">
 <head>
@@ -23,6 +23,7 @@
 		<th>No</th>
 		<th>Name</th>
 		<th colspan="2">Email</th>
+		<th>Jenis Akun</th>
 	</tr>
 <?php
 	$count = 1;
@@ -32,6 +33,9 @@
 			<td>'.$count++.'</td>
 			<td>'.$result['name'].'</td>
 			<td>'.$result['email'].'</td>
+			<td>'.$result['level'].'</td>
+			<td><a href="edit.php?id='.$result['user_id'].'"><button type="button" class="btn btn-primary">Edit</button></td>
+			<td><a href="deleteproses.php?id='.$result['user_id'].'" button type="button" class="btn btn-danger">Delete</button></td>
 			</tr>';
 	}
 ?>

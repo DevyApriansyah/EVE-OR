@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-  include "connect.php";
+  include "../connect.php";
   $user = $_GET['id'];
   $query = mysqli_query($conn, "SELECT * FROM user WHERE user_id = '$user'");
   $result = mysqli_fetch_array($query);

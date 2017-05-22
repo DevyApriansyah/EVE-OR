@@ -10,7 +10,7 @@
 	if (mysqli_query($conn, $sql_buat)){
 ?>
 		<script language="javascript">alert("Input Successful");</script>
-		<script>document.location.href='tampilan_awal_sponsor/index.html';</script>
+		<script>document.location.href='tampilan_awal_sponsor/awalspo.php';</script>
 <?php
 	}
 	else{

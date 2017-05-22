@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-	include "connect.php";
-	if ($_SESSION['admin']){
+	include "../connect.php";
+	if (isset($_SESSION['admin'])){
 	$query = mysqli_query($conn, "SELECT * FROM user");
 ?>
 <html lang="en">
@@ -17,6 +17,7 @@
 <body>
 	<center>
 		<h1>Daftar Akun EVE-OR</h1><br><br>
+		<a href="../logoutproses.php">Logout</a> <br>
 	</center>
 	<div style="width: 80%; margin: auto;">
 	<table class="table centered">
@@ -47,9 +48,20 @@
 </html>
 <?php
 }
-else {
-	?>
-	<script>document.location.href='login.php';</script>
-	<?php
-}
+else if (@$_SESSION['company']){
+		?>
+		<script>document.location.href='../tampilan_awal_sponsor/awalspo.php';</script>
+		<?php
+	}
+	else if (@$_SESSION['committee']){
+			?>
+			<script>document.location.href='../tampilan_awal_acara/awal.php';</script>
+			<?php
+		}
+	else{
+			?>
+			<script language="javascript">alert("Anda belum login");</script>
+			<script>document.location.href='../index.php';</script>
+			<?php
+		}
 ?>
