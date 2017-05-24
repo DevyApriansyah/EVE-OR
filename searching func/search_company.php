@@ -2,9 +2,9 @@
 <html>
 
 <?php
-	include 'connect.php';
+	include '../connect.php';
 	$keyword=$_GET['keyword'];
-	
+
 	if(empty($keyword)){
 		?> <script>alert("Silakan masukan kata kunci");</script> <?php
 		header("refresh:0; index.php");
