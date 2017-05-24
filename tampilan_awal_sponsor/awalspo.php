@@ -63,7 +63,7 @@
 
 				<!-- search-form -->
 				<div class="search-form">
-					<form align="center" action="../searching func./search_event.php" method="get">
+					<form align="center" action="../searching func./list_event.php" method="get">
 						<input type="text" name="keyword" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
 						<input type="submit" value="" />
 					</form>
