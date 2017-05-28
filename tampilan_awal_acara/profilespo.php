@@ -40,9 +40,9 @@
 				<div class="container">
 				<div class="cart-info">
 					<ul>
-						<li class="dropdown"><a href="#"><?php echo $data['name']; ?></a>
+						<li class="dropdown"><a href="../tampilan_acara_liat_profile/index.php"><?php echo $data['name']; ?></a>
 							<div class="dropdown-content">
-							<a href="#">View Profile</a> <br>
+							<a href="../tampilan_acara_liat_profile/index.php">View Profile</a> <br>
 							<a href="../logoutproses.php">Logout</a> <br>
 							</div>
             </li>
