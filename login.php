@@ -47,9 +47,12 @@
         <input type="text" class="input" name="name" placeholder="Username"/>
         <input type="password" class="input" name="password" placeholder="Password"/>
       </div>
-      <button class="submit" id="submit" >Login</button> <br>
-      <button class="submit" id="submit" fontcolor="white">Forgot Password</button>
+      <button class="submit" id="submit">Login</button> <br>
+      <button class="submit" id="submit"><a href="lostpassword.htm">Forgot Password</a></button>
+    </form>
       </div>
+
+
 
       </body>
       </html>

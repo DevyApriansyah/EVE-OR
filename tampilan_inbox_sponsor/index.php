@@ -47,11 +47,11 @@
 							</div>
 						</li>
 
-						<li class="dropdown"><a href="#">Category</a>
+            <li class="dropdown"><a href="#">Category</a>
 							<div class="dropdown-content">
-							<a href="#">Musik</a> <br>
-							<a href="#">Olahraga</a> <br>
-							<a href="#">Edukasi</a>
+							<a href="../category/categorypam.php">Pameran</a> <br>
+							<a href="../category/categorysem.php">Seminar</a> <br>
+							<a href="../category/categorypert.php">Pertandingan</a>
 							</div>
 						</li>
 
@@ -62,10 +62,10 @@
 
 					</ul>
 				</div>
-				<!-- search-form -->
+        <!-- search-form -->
 				<div class="search-form">
-					<form align="center">
-						<input type="text" class="text" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
+					<form align="center" action="../searching func./list_event.php" method="get">
+						<input type="text" name="keyword" value="Search Event Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
 						<input type="submit" value="" />
 					</form>
 				</div>

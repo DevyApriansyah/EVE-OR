@@ -17,7 +17,7 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
-		<!----webfonts--->
+		<!---webfonts--->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 		<!---//webfonts--->
@@ -77,7 +77,18 @@
 				</div>
 				<!-- header -->
 			</div>
-  <form name="create" action="inputproses.php" method="POST">
+
+		<!--<form action="editproses1.php" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="user_id" value="<?php echo $data ['user_id'];?>">
+
+		<table border=0 align=left>
+
+		<input type="file" name="file">
+		<input type="submit" name="upload" value="Upload">
+		</form>-->
+  <div class="container">
+  <form name="create" action="inputproses.php" method="POST" enctype="multipart/form-data">
+    <br><br>
 		<label>Nama Acara</label>
 		<br>
 		<input type="text" name="name" required >
@@ -110,32 +121,26 @@
 		<input type="date" name="tgl1" required> s/d <input type="date" name="tgl2" required>
 		<br><br>
 
-		<label>Tempat</label>
+		<label>Tempat Pelaksanaan</label>
 		<br>
 		<input type="text" name="place" required>
 		<br><br>
 
-		<label>Jumlah Biaya yang Diperlukan</label>
+		<!--<label>Poster Acara (240px x 150px)</label>
 		<br>
-		<input type="tel" name="cost" required>
-		<br><br>
-
-		<label>Poster Acara (240px x 150px)</label>
-		<br>
-		<input type="file">
-		<br>
-
+		<input type="file" name="file">
+		<br>-->
 
 		<label>Narahubung</label>
 		<br>
 		<table border=0 align=left>
 		<tr>
 			<td>Nama</td>
-			<td><input type="tel" name="contactname" placeholder="Farah Ghita" required></td>
+			<td><input type="text" name="contactname" placeholder="Farah Ghita" required></td>
 		</tr>
 		<tr>
 			<td>Nomor Telepon</td>
-			<td><input type="tel" name="contactnum" placeholder="Contoh : 0838xxxxxxx" required></td>
+			<td><input type="text" name = "contactnum" pattern=[0-9]{6,12} class="validate" placeholder="Contoh : 0838xxxxxxx" required></td>
 		</tr>
 		</table>
 		<br><br><br>
@@ -155,6 +160,7 @@
 		<br>
 		<input type="submit" name="submit" value="Tambah Acara"></input>
 </form>
+</div>
 		<br>
 		<br><br><br><br><br><br>
 		<!-- footer -->

@@ -16,7 +16,7 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
-		<!----webfonts--->
+		<!---webfonts--->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 		<!---//webfonts--->
@@ -61,10 +61,10 @@
 					</ul>
 				</div>
 
-				<!-- search-form -->
+        <!-- search-form -->
 				<div class="search-form">
-					<form align="center" action="../searching func./search_event.php" method="get">
-						<input type="text" name="keyword" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
+					<form align="center" action="../searching func./list_event.php" method="get">
+						<input type="text" name="keyword" value="Search Event Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
 						<input type="submit" value="" />
 					</form>
 				</div>
@@ -95,7 +95,7 @@
                 while($result = mysqli_fetch_array($queryyy)){
                   echo'<div class="col-md-3">
                           <div class="iteam-grid text-center">
-                          <img src="images/abc.png" title="name" /> <br>
+                          <img src="../tampilan_acara_edit_profile/file/'.$result['poster'].'" title="name" /> <br>
                               <a href="../tampilan_acara_membuat_acara/index.php"><label>'.$result['name'].'</label></a>
 								<ul>
 									<li><a class="cart" href="#">Sponsori</a></li>

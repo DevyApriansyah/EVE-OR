@@ -18,7 +18,7 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
-		<!----webfonts--->
+		<!---webfonts--->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 		<!---//webfonts--->
@@ -49,7 +49,7 @@
 							</div>
 						</li>
           </li>
-          <li><a href="../tampilan_awal_acara/index.html">Find Sponsor</a></li>
+          <li><a href="../tampilan_awal_acara/sponsor.php">Find Sponsor</a></li>
 
           <li><a href="#">Notifikasi</a></li>
 
@@ -83,14 +83,19 @@
 			</div>
 		<br>
 
-		<img src="images/<?php echo $data['image']?>" title="image">
-		
+		<form action="editproses1.php" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="user_id" value="<?php echo $data ['user_id'];?>">
+		<img src="file/<?php echo $data['image']?>" title="image">
 
 		<table border=0 align=left>
+
+		<input type="file" name="file" accept="image/jpeg/x-png">
+		<input type="submit" name="upload" value="Upload"> <br>
+	</form>
+
       <form name="create" action="../tampilan_acara_edit_profile/editproses.php" method="POST">
-        <input type="file" accept="image/jpeg/png" name="image" value="<?php echo $data ['image'];?>">
-		<br><br>
-        
+
+
         <input type="hidden" name="user_id" value="<?php echo $data ['user_id'];?>">
 		<tr>
 			<th>Full Name</th>
@@ -107,14 +112,19 @@
 			<th><input type="email" name="email" value="<?php echo $data ['email'];?>"required></th>
 		</tr>
 
-		<tr>
+    <tr>
 			<th>Telephone Number</th>
-			<th><input type="number" name = "telp" value="<?php echo $data ['telp'];?>"required></th>
+			<th><input type="text" name = "telp" pattern=[0-9]{6,12} class="validate" value="<?php echo $data ['telp'];?>"required></th>
+		</tr>
+
+    <tr>
+			<th>Password</th>
+			<th><input type="password" name = "password" value="<?php echo $data ['password'];?>"required></th>
 		</tr>
 
 		<tr>
 			<th></th>
-			<th><button type="submit">Submit</button></th>
+			<th><input type="submit" name="submit" value="Submit"></th>
 		</tr>
   </form>
 		</table>

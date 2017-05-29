@@ -35,9 +35,11 @@
     <div class="topbar">
       <div class="spanColor"></div>
     <form name="create" action="inputprosesspo.php" method="POST">
-      <input type="text" class="input" id="username" placeholder="Username" maxlength="16" required/>
-      <input type="email" class="input" id="email" placeholder="Email" required/>
-      <input type="password" class="input" id="password" placeholder="Password" required/>
+      <input type="text" class="input" name="name" placeholder="Username" maxlength="16" required/>
+      <input type="text" class="input" name="fullname" placeholder="Company Name" maxlength="16" required/>
+      <input type="email" class="input" name="email" placeholder="Email" required/>
+      <input type="password" class="input" name="password" placeholder="Password" required/>
+      <input type="password" class="input" name="password1" placeholder="Re-type Password" required/>
     <button class="submit" id="submit" >Sign Up</button>
     </div>
   </div>

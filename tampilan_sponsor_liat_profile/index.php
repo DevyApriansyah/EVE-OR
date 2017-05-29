@@ -16,7 +16,7 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
-		<!----webfonts--->
+		<!---webfonts--->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 		<!---//webfonts--->
@@ -47,11 +47,11 @@
 							</div>
 						</li>
 
-						<li class="dropdown"><a href="#">Category</a>
+            <li class="dropdown"><a href="#">Category</a>
 							<div class="dropdown-content">
-							<a href="#">Musik</a> <br>
-							<a href="#">Olahraga</a> <br>
-							<a href="#">Edukasi</a>
+							<a href="../category/categorypam.php">Pameran</a> <br>
+							<a href="../category/categorysem.php">Seminar</a> <br>
+							<a href="../category/categorypert.php">Pertandingan</a>
 							</div>
 						</li>
 
@@ -61,10 +61,10 @@
 					</ul>
 				</div>
 
-				<!-- search-form -->
+        <!-- search-form -->
 				<div class="search-form">
-					<form align="center">
-						<input type="text" class="text" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
+					<form align="center" action="../searching func./list_event.php" method="get">
+						<input type="text" name="keyword" value="Search Event Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
 						<input type="submit" value="" />
 					</form>
 				</div>
@@ -87,7 +87,7 @@
 			</div>
 		<br>
 
-		<img src="images/<?php echo $data['image']?>" title="<?php echo $data['name']; ?>" title="name" / align=center>
+		<img src="../tampilan_sponsor_edit_profile/file/<?php echo $data['image']?>" title="<?php echo $data['name']; ?>" title="name" / align=center>
 		<br><br>
 
 		<table border=0 align=left>
@@ -96,6 +96,11 @@
 			<th><?php echo $data['fullname']; ?></th>
 		</tr>
     <tr>
+      <tr>
+  			<th>Company Description</th>
+  			<th><?php echo $data['deskripsi']; ?></th>
+  		</tr>
+      <tr>
       <th>Username</th>
       <th><?php echo $data['name']; ?></th>
     </tr>
@@ -123,7 +128,7 @@
 		</table>
 
 		<br><br><br><br><br><br><br><br>
-		<br><br><br>
+		<br><br><br><br><br>
 		</div>
 
 		<!-- footer -->

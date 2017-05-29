@@ -66,10 +66,10 @@
 				</script>
 				<!-- script-for-nav -->
 
-				<!-- search-form -->
+        <!-- search-form -->
 				<div class="search-form">
-					<form>
-						<input type="text" class="text" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
+					<form align="center" action="../searching func./list_company.php" method="get">
+						<input type="text" name="keyword" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
 						<input type="submit" value="" />
 					</form>
 				</div>
@@ -90,11 +90,11 @@
                 while($result = mysqli_fetch_array($queryyy)){
                   echo'<div class="col-md-3">
                           <div class="iteam-grid text-center">
-                          <img src="images/abc.png" title="name" /> <br>
+                          <img src="../tampilan_sponsor_edit_profile/file/'.$result['image'].'" title="name" /> <br>
                               <a href="../tampilan_acara_membuat_acara/index.php"><label>'.$result['name'].'</label></a>
 								<ul>
 									<li><a class="cart" href="#">Tawari</a></li>
-									<li><a class="more" href="deskripsispo.php">Details</a></li>
+									<li><a class="more" href="../deskripsi/deskripsispo.php?id='.$result['user_id'].'">Details</a></li>
 									<div class="clearfix"> </div>
 								</ul>
               </div>
@@ -149,20 +149,31 @@
 						<li></li>
 						</ul>
 						</div>
-
-						<div class="col-md-3 footer-grid contact-grid">
-						<ul class="social-icons">
-						<li>
-							<a href="#"><span class="thumb"> </span>@eveor_id</a>
-						</li>
-						</ul>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- footer -->
 		<!-- container -->
+
+		 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#myModal').on('show.bs.modal', function (e) {
+            var rowid = $(e.relatedTarget).data('id');
+            //menggunakan fungsi ajax untuk pengambilan data
+            $.ajax({
+                type : 'post',
+                url : 'deskripsispo.php',
+                data :  'rowid='+ rowid,
+                success : function(data){
+                $('.fetched-data').html(data);//menampilkan data ke dalam modal
+                }
+            });
+         });
+    });
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>
 <?php }

@@ -16,7 +16,7 @@
 	$data = mysqli_fetch_array($query);
 	$author = $data['user_id'];
 
-	$sql_buat = "INSERT INTO event(event_id, name, category, description, org, tgl1, tgl2, place, cost, contactname, contactnum, author) VALUE('','$name', '$category', '$description', '$org', '$tgl1', '$tgl2', '$place', '$cost', '$contactname', '$contactnum', '$author')";
+	$sql_buat = "INSERT INTO event(event_id, name, category, description, org, tgl1, tgl2, place, cost, contactname, contactnum, author, poster) VALUE('','$name', '$category', '$description', '$org', '$tgl1', '$tgl2', '$place', '$cost', '$contactname', '$contactnum', '$author', '../images/default.png')";
 	if (mysqli_query($conn, $sql_buat)){
 ?>
 		<script language="javascript">alert("Input Successful");</script>

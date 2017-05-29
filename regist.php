@@ -37,7 +37,7 @@
             Make Your Own Event
           </div>
     </div>
-
+<div class="header">
   <div class="form">
     <div class="forceColor"></div>
     <div class="topbar">
@@ -46,11 +46,14 @@
       <input type="text" class="input" name="name" placeholder="Username" maxlength="16" required/>
       <input type="email" class="input" name="email" placeholder="Email" required/>
       <input type="password" class="input" name="password" placeholder="Password" required/>
+      <input type="password" class="input" name="password1" placeholder="Re-type Password" required/>
+      <img src="captcha_image.php" class="input" alt="captcha"/><br/>
     <button class="submit" id="submit" >Sign Up</button>
     </div>
   </div>
 
   </body>
+</div>
   </html>
 
 <?php

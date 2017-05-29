@@ -83,18 +83,21 @@
 		<div class="collections">
 		<div class="iteam-grids">
 					<div class="container">
-						<?php
-						$queryyy = mysqli_query($conn, "SELECT * FROM user WHERE level='company' AND name=$name");
-						$result = mysqli_fetch_array($queryyy)
-					<img src="images/abc.png" title="name" /> <br>
-					<h2>echo .$result['name'].</h2>;
+						
+						
+					<?php
+						$id = $_GET['user_id'];
+						$queryyy = mysqli_query($conn, "SELECT * FROM user WHERE user_id = '$id'");
+						$result = mysqli_fetch_array($queryyy);
+					
+					echo'<h2>'.$result['name'].'</h2>
 					<p>
 						Berdiri sejak 1957, kami hadir di tengah masyarakat Indonesia dan tumbuh menjadi salah satu bank terbesar di Indonesia. Selama hampir 60 tahun kami tak pernah berhenti menawarkan beragam solusi perbankan yang menjawab kebutuhan finansial nasabah dari berbagai kalangan.
 						Melalui beragam produk dan layanan yang berkualitas dan tepat sasaran, solusi finansial BCA mendukung perencanaan keuangan pribadi dan perkembangan nasabah bisnis. Didukung oleh kekuatan jaringan antar cabang, luasnya jaringan ATM, serta jaringan perbankan elektronik lainnya, siapa saja dapat menikmati kemudahan dan kenyamanan bertransaksi yang ditawarkan BCA.
 						Sesuai dengan komitmen "Senantiasa di Sisi Anda", kami akan terus berupaya menjaga kepercayaan dan harapan nasabah serta para pemangku kepentingan. Memenangkan kepercayaan untuk memberikan solusi terbaik bagi kebutuhan finansial para nasabah adalah suatu kehormatan dan kebanggaan bagi BCA.
 						Sesuai Surat Keputusan Menteri Keuangan Republik Indonesia no.42855/ U.M.II tertanggal 14 Maret 1957 perihal ijin melakukan usaha bank
-					</p>
-?>
+					</p> 
+
 					<br>
 					<p>
 					Select File: <input type="file" name="proposal" multiple>
@@ -103,7 +106,9 @@
 					<input type="reset" value="Cancel">
 					
 					<input type="submit" value="Submit">
-					</p>
+					</p>';
+					
+					?>
 					</div>
 				<!-- iteam-grids -->
 		</div>

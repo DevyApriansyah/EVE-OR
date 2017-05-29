@@ -7,16 +7,16 @@
 <html>
 	<head>
 		<title>Homepage | EVE-OR</title>
-		<link href="../tampilan_awal_acara/css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/jquery.min.js"></script>
 		 <!-- Custom Theme files -->
-		<link href="../tampilan_awal_acara/css/style.css" rel='stylesheet' type='text/css' />
+		<link href="css/style.css" rel='stylesheet' type='text/css' />
    		 <!-- Custom Theme files -->
    		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
-		<!----webfonts--->
+		<!---webfonts--->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700,800,400,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 		<!---//webfonts--->
@@ -48,7 +48,7 @@
 						</li>
 
 						<li><a href="../tampilan_awal_acara/sponsor.php">Find Sponsor</a></li>
-
+ 
 						<li><a href="#">Notifikasi</a></li>
 
 						<li><a href="../tampilan_awal_acara/awal.php">Home</a></li>
@@ -57,8 +57,8 @@
 
 				<!-- search-form -->
 				<div class="search-form">
-					<form align="center">
-						<input type="text" class="text" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
+					<form align="center" action="../searching func./list_company.php" method="get">
+						<input type="text" name="keyword" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
 						<input type="submit" value="" />
 					</form>
 				</div>
@@ -92,9 +92,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="container">
-        <h2><label>Acaramu</label></h2>
-        </div>
+        <label>----- Acaramu -----</label>
           <div class="collections">
               <div class="iteam-grids">
                 <div class="container">
@@ -103,11 +101,13 @@
             $queryyy = mysqli_query($conn, "SELECT * FROM event WHERE author = $author");
           	while($result = mysqli_fetch_array($queryyy)){
           		echo'<div class="col-md-3">
+					  <div onclick=location.href="../deskripsi/deskripsi.php?id='.$result['event_id'].'";>
                       <div class="iteam-grid text-center">
-                      <img src="images/abc.png" title="name" /> <br>
-                          <a href="../tampilan_acara_membuat_acara/index.php"><label>'.$result['name'].'</label></a>
+                      <img src="../deskripsi/file/'.$result['poster'].'" title="name" />
+                          <label><a href="../deskripsi/deskripsi.php?id='.$result['event_id'].'"><label>'.$result['name'].'</label></a></label>
                       </div>
-                     </div>';
+                      </div>
+                        </div>';
             }
         ?>
         </div>

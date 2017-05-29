@@ -56,10 +56,10 @@
 				</div>
 
 
-				<!-- search-form -->
+        <!-- search-form -->
 				<div class="search-form">
-					<form align="center">
-						<input type="text" class="text" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
+					<form align="center" action="../searching func./list_company.php" method="get">
+						<input type="text" name="keyword" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
 						<input type="submit" value="" />
 					</form>
 				</div>
@@ -82,7 +82,7 @@
 			</div>
 		<br>
 
-		<img src="images/<?php echo $data['image']?>" title="<?php echo $data['name']; ?>">
+		<img src="../tampilan_acara_edit_profile/file/<?php echo $data['image']?>" title="<?php echo $data['name']; ?>">
 		<br><br>
 
 		<table border=0 align=left>

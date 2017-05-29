@@ -303,7 +303,7 @@ span.menu{
 	background:#120f12;
 	float:right;
 	width:28%;
-	padding:0.8em 2em; 
+	padding:0.8em 2em;
 	position:relative;
 }
 .Welcome-note-right:before{
@@ -493,7 +493,7 @@ ul.social-icons li a:hover{
 	position:relative;
 	padding:0.5em;
 	width:100%;
-} 
+}
 .news-letter-right form input[type="submit"]{
 	width: 20px;
 	height: 20px;
@@ -840,7 +840,7 @@ ul.r-list li.heart span{
 	width: 32.6%;
 	float: left;
 	margin-right: 1%;
-} 
+}
 .contact-form-row div span,.contact-form-row2  span{
 	font-size:1.2em;
 	color:#2C3E50;
@@ -851,7 +851,7 @@ ul.r-list li.heart span{
 }
 .contact-form-row div input[type="text"]{
 	width:100%;
-	padding:1em;	
+	padding:1em;
 	font-family: 'Droid Sans', sans-serif;
 	border:1px solid #EEE;
 	-webkit-appearance:none;
@@ -871,7 +871,7 @@ ul.r-list li.heart span{
 }
 .contact-form-row2 textarea{
 	width:100%;
-	padding:1em;	
+	padding:1em;
 	font-family: 'Droid Sans', sans-serif;
 	border:1px solid #EEE;
 	-webkit-appearance:none;
