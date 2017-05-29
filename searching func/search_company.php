@@ -2,7 +2,7 @@
 <html>
 
 <?php
-	include 'connect.php';
+	include '../connect.php';
 	$keyword=$_GET['keyword'];
 
 	if(empty($keyword)){

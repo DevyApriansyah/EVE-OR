@@ -108,7 +108,11 @@
                 while($hasil = mysqli_fetch_array($queryyy)){
                   echo'<div class="col-md-3">
                           <div class="iteam-grid text-center">
+<<<<<<< HEAD
                           <img src="images/abc.png" title="name" /> <br>
+=======
+                          <img src="images/abc.png" title="name" />
+>>>>>>> origin/master
                               <a href="../deskripsi/deskripsi.php?id='.$hasil['event_id'].'"><label>'.$hasil['name'].'</label></a>
 								<ul>
 									<li><a class="cart" href="#">Sponsori</a></li>
