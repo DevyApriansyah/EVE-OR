@@ -16,7 +16,7 @@ if($pass == $pass1) {
 	$_SESSION['committee'] = $data['user_id'];
 ?>
 		<script language="javascript">alert("Input Successful");</script>
-		<script>document.location.href='tampilan_awal_acara/awal.php';</script>
+		<script>document.location.href='formulir.php';</script>
 <?php
 	}
 	else{

@@ -45,7 +45,7 @@
 							<a href="../tampilan_acara_liat_profile/index.php">View Profile</a> <br>
 							<a href="../logoutproses.php">Logout</a> <br>
 							</div>
-            </li>
+						</li>
 
 						<li><a href="../tampilan_awal_acara/sponsor.php">Find Sponsor</a></li>
 
@@ -94,8 +94,7 @@
 					</p>
 					<br>
 					<p>
-          <form action="../tampilan_awal_acara/upload.php" method="post" enctype="multipart/form-data">
-					Select File: <input type="file" name="photobaru">
+					Select File: <input type="file" name="proposal" multiple>
 					</p>
 					<p>
 					<input type="reset" value="Cancel">

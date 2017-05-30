@@ -45,9 +45,8 @@
     <form name="create" action="inputproses.php" method="POST">
       <input type="text" class="input" name="name" placeholder="Username" maxlength="16" required/>
       <input type="email" class="input" name="email" placeholder="Email" required/>
-      <input type="password" class="input" name="password" placeholder="Password" required/>
-      <input type="password" class="input" name="password1" placeholder="Re-type Password" required/>
-      <img src="captcha_image.php" class="input" alt="captcha"/><br/>
+      <input type="password" class="input" name="password" pattern=[a-9]{6,12} placeholder="Password   (min. 6 karakter)" required/>
+      <input type="password" class="input" name="password1" pattern=[a-9]{6,12} placeholder="Re-type Password" required/>
     <button class="submit" id="submit" >Sign Up</button>
     </div>
   </div>

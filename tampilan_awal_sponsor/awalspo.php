@@ -64,11 +64,7 @@
         <!-- search-form -->
 				<div class="search-form">
 					<form align="center" action="../searching func./list_event.php" method="get">
-<<<<<<< HEAD
 						<input type="text" name="keyword" value="Search Event Here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
-=======
-						<input type="text" name="keyword" value="Keyword or product code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword or product code';}">
->>>>>>> origin/master
 						<input type="submit" value="" />
 					</form>
 				</div>

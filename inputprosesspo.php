@@ -17,7 +17,7 @@ if($pass == $pass1) {
 	$_SESSION['company'] = $data['user_id'];
 ?>
 		<script language="javascript">alert("Input Successful");</script>
-		<script>document.location.href='tampilan_awal_sponsor/awalspo.php';</script>
+		<script>document.location.href='formulir1.php';</script>
 <?php
 	}
 	else{
