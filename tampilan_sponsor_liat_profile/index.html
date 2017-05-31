@@ -1,9 +1,8 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+<?php
+  include "../connect.php";
+  if (isset($_SESSION['company'])){
+    $company = $_SESSION['company'];
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -22,8 +21,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 		<!---//webfonts--->
 	</head>
-	
+
 	<body>
+		<?php
+		$query = mysqli_query($conn, "SELECT * FROM user WHERE user_id = $company");
+		$data = mysqli_fetch_array($query);
+		?>
 		<!-- container -->
 			<!-- header -->
 			<div class="header">
@@ -32,32 +35,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<a href="index.html"><img src="images/logo.png" title="baku" /></a>
 				</div>
 				<!-- logo -->
-				
+
 				<!-- cart-info -->
 				<div class="container">
 				<div class="cart-info">
 					<ul>
 						<li class="dropdown"><a href="#">[Nama User]</a>
-							<div class="dropdown-content"> 
-							<a href="../tampilan_sponsor_liat_profile/index.html">View Profile</a> <br>
-							<a href="#">Logout</a> <br>
+							<div class="dropdown-content">
+								<a href="../tampilan_sponsor_liat_profile/index.php">View Profile</a> <br>
+								<a href="../logoutproses.php">Logout</a> <br>
 							</div>
 						</li>
-						
+
 						<li class="dropdown"><a href="#">Category</a>
-							<div class="dropdown-content"> 
+							<div class="dropdown-content">
 							<a href="#">Musik</a> <br>
 							<a href="#">Olahraga</a> <br>
 							<a href="#">Edukasi</a>
 							</div>
 						</li>
-						
+
 						<li><a href="../tampilan_inbox_sponsor/index.html">Inbox</a></li>
-						
+
 						<li><a href="../tampilan_awal_sponsor/index.html">Home</a></li>
 					</ul>
 				</div>
-				
+
 				<!-- search-form -->
 				<div class="search-form">
 					<form align="center">
@@ -67,7 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="clearfix"> </div>
 				<!-- /search-form -->
-				
+
 				<!-- script-for-nav -->
 				<script>
 					$(document).ready(function(){
@@ -77,43 +80,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					});
 				</script>
 				<!-- script-for-nav -->
-				
+
 				<!-- /cart-info -->
 				</div>
 				<!-- header -->
 			</div>
 		<br>
-		
+
 		<img src="images/profile.png" title="name" / align=center>
 		<br><br>
-		
+
 		<table border=0 align=left>
 		<tr>
 			<th>Company Name</th>
 			<th>BCA</th>
 		</tr>
-		
+
 		<tr>
 			<th>Address</th>
 			<th>Jalan Babakan Lio No.20, Bogor, Jawa Barat</th>
 		</tr>
-		
+
 		<tr>
 			<th>Email</th>
 			<th>bca_indo@gmail.com</th>
 		</tr>
-		
+
 		<tr>
 			<th>Telephone Number</th>
 			<th>(021)7250092</th>
 		</tr>
 		</table>
-		
+
 		<br><br><br><br><br><br><br><br>
 		<a href="https://www.google.com"><input type="button" value="Edit Profile"></a>
 		<br><br><br>
 		</div>
-		
+
 		<!-- footer -->
 		<div class="footer">
 			<div class="footer-grids">
@@ -125,7 +128,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><span class="c-icon1"> </span><a href="#">eveor_id@gmail.com</a></li>
 							</ul>
 						</div>
-							
+
 						<div class="col-md-3 footer-grid contact-grid">
 						<ul class="social-icons">
 						<li>
@@ -134,7 +137,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li></li>
 						</ul>
 						</div>
-						
+
 						<div class="col-md-3 footer-grid contact-grid">
 						<ul class="social-icons">
 						<li>
@@ -143,7 +146,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li></li>
 						</ul>
 						</div>
-						
+
 						<div class="col-md-3 footer-grid contact-grid">
 						<ul class="social-icons">
 						<li>
@@ -159,4 +162,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!-- container -->
 	</body>
 </html>
-

@@ -1,7 +1,21 @@
 <?php
-	@session_start();
-	include "connect.php";
-	?>
+  @session_start();
+  include "connect.php";
+  if (@$_SESSION['committee']){
+    ?>
+    <script>document.location.href='tampilan_awal_acara/awal.php';</script>
+    <?php
+  } else if (@$_SESSION['company']){
+      ?>
+      <script>document.location.href='tampilan_awal_sponsor/awalspo.php';</script>
+      <?php
+    }else if (@$_SESSION['admin']){
+        ?>
+        <script>document.location.href='admin/list.php';</script>
+        <?php
+      }else{
+  ?>
+
   <!DOCTYPE html>
   <html>
   <head>
@@ -30,12 +44,18 @@
     <div class="topbar">
       <div class="spanColor"></div>
       <form class="col-md-7 col-md-offset-2 form-horizontal" name="signin" action="loginprocess.php" method="POST" enctype="multipart/form-data">
-      <input type="text" class="input" name="name" placeholder="Username"/>
-      <input type="password" class="input" name="password" placeholder="Password"/>
-    </div>
-    <button class="submit" id="submit" >Login</button> <br>
-    <button class="submit" id="submit" fontcolor="white">Forgot Password</button>
-  </div>
+        <input type="text" class="input" name="name" placeholder="Username"/>
+        <input type="password" class="input" name="password" placeholder="Password"/>
+      </div>
+      <button class="submit" id="submit">Login</button> <br>
+      <button class="submit" id="submit"><a href="lostpassword.htm">Forgot Password</a></button>
+    </form>
+      </div>
 
-  </body>
-  </html>
+
+
+      </body>
+      </html>
+  <?php
+  }
+   ?>
