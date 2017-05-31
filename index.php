@@ -71,7 +71,7 @@
 							</ul>
                     </li>
                     <li>
-						<a class="page-scroll" href="http://localhost:8080/eve-or/login.php">Sign In</a>
+						<a class="page-scroll" href="halaman_login\index.html">Sign In</a>
                     </li>
 
                 </ul>
