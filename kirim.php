@@ -80,7 +80,7 @@ $mail->SMTPAuth = true;
 $mail->Username = "luthfijojow@gmail.com";
 
 //Password to use for SMTP authentication
-$mail->Password = "goahead14";
+$mail->Password = "xxxxxxxx";
 
 //Set who the message is to be sent from
 $mail->setFrom('luthfijojow@gmail.com', 'EVE-OR');
